@@ -1,5 +1,7 @@
 import '@/styles/globals.css'
-import { fontSans } from '@/lib/font'
+
+import { fontSans } from '@/lib/fonts'
+import { cn } from '@/utils/style-utils'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ko">
-      <body className={fontSans.className}>{children}</body>
+    <html lang="ko" className={cn(fontSans.variable)}>
+      <body>{children}</body>
     </html>
   )
 }
